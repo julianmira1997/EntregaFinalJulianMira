@@ -1,0 +1,640 @@
+
+
+.main__header{
+    background: url(../img/fondo-h1.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.main__title{
+    font-size: 1.7em;
+    display: block;
+    color: goldenrod;
+}
+
+
+.icon__menu{
+    font-size: 1.3em;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    display: block;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icon__menu:active{
+    color: goldenrod;
+    background-color: goldenrod;
+}
+
+.menu{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #212121;
+    width: 90%;
+    padding: 20px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.nav__item{
+    padding: 20px;
+    text-align: center;
+    width: 190px;
+    margin: auto;
+}
+
+
+
+.nav__link{
+    position: relative;
+    display: block;
+    font-size: 1.2em;
+}
+
+.nav__link:hover{
+    color: goldenrod;
+    border-bottom: 2px solid goldenrod;
+}
+
+.nav__link--select{
+    color: goldenrod;
+}
+
+.nav-redes{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    font-size: 1.4em;
+    margin-top: 20px;
+}
+
+.mostrar{
+    opacity: 1;
+    visibility: visible;
+}
+
+.main__def{
+    text-align: center;
+    padding: 7px;
+    margin-top: 20px;
+}
+
+.def__title{
+    font-size: 1.7em;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.def__text{
+    font-size: 1.1em;
+}
+
+.banner__def{
+    background: url(../img/mitologias.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 290px;
+    position: absolute;
+    margin-top: 20px;
+    left: 10px;
+    top: 70px;
+    width: 95%;
+    z-index: -999;
+    
+}
+
+.banner__def::before{
+    content: "";
+    width: 100%;
+    min-height: 290px;
+    background:rgba(0, 0, 0, 0.4) ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -999;
+}
+
+
+
+.def{
+    background-color: hsl(0, 79%, 24%) ;
+    padding: 15px;
+    margin: 40px 20px;
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+    
+}
+
+.def__title{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-decoration: overline ;
+    
+}
+
+.def__text{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.def__img{
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+
+.main__aspect{
+    padding: 10px 20px;
+    line-height: 20px;
+    position: relative;
+}
+
+.banner__aspect{
+    position: relative;
+    margin-top: 15px;
+    background: url(../img/cielo-estrellado.jpg!d);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    top: 300px;
+    min-height: 250px;
+    
+}
+
+.banner__aspect::before{
+    content: "";
+    width: 100%;
+    min-height: 250px;
+    background:rgba(0, 0, 0, 0.4) ;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+
+
+.aspect__title{
+    color: goldenrod;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    margin: 15px;
+    text-align: center;
+}
+
+.aspect__text{
+    margin-bottom: 10px;
+}
+
+.aspect__img{
+    margin-top: 30px;
+}
+
+.aspect__span{
+    color: goldenrod;
+}
+
+
+
+
+
+.dioses__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    
+}
+
+.dioses__item{
+    margin-top: 25px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background: #666;
+}
+
+.dioses__h2{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 15px;
+    color: goldenrod;
+    background-color: black;
+    padding: 10px;
+    border: 2px solid goldenrod;
+}
+
+
+.dioses__title{
+    font-size: 1.5em;
+    color: goldenrod;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.dioses__img{
+    margin-bottom: 10px;
+}
+
+.dioses__img:hover{
+    transform: scale(1.1);
+    border: 1px solid goldenrod;
+}
+
+.dioses__text{
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+
+
+.historia__container{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.historia__h2{
+    text-align: center;
+    font-size: 2em;
+    margin: 15px;
+    color: goldenrod;
+    background-color: black;
+    padding: 10px;
+}
+
+.historia__item{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+    text-align: center;
+    background-color: black;
+}
+
+.historia__title{
+    text-align: center;
+    color: goldenrod;
+    margin: 20px;
+}
+
+.historia__text{
+    color: white;
+}
+
+.historia__img{
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+
+.list__item{
+    margin: 15px;
+}
+
+
+
+
+.footer{
+    margin-top: 320px;
+    background-color: #ddd;
+    padding: 15px;
+}
+
+.footer-section__redes h2{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #daa520;
+    border-bottom: 2px solid;
+}
+
+.footer-section__redes div{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.footer-section__redes img{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.form-contact__title{
+    font-size: 2em;
+    color: goldenrod;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.form-contact__title{
+    background-color: #eee;
+    top: 40px;
+    font-size: 3em;
+    border-bottom: 2px solid;
+}
+
+.form-container{
+    background-color: #eee;
+    min-height: 70vh;
+    display: flex;
+}
+
+.form-contact{
+    margin: 15px auto;
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5em 3em;
+    border-radius: 2%;
+    box-shadow: 2px 5px 10px -5px rgba(0, 0, 0, 60%);
+
+}
+
+.form-contact__group textarea::placeholder{
+    color: rgba(0 0 0 / 20%);
+
+}
+
+.form-contact__group textarea{
+    max-width: 100%;
+    max-height: 180px;
+    resize: none;
+}
+
+.form-contact__label{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    color: rgba(0 0 0 / 20%);
+    transform: translateY(10px);
+    transition: transform 0.5s;
+}
+
+.form-contact__input:focus + .form-contact__label{
+    transform: translateY(-12px) scale(0.7);
+    transform-origin: left top;
+}
+
+.form-contact__container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form-contact__group{
+    position: relative;
+}
+
+.form-contact__input{
+    width: 100%;
+    background: none;
+    font-size: 1rem;
+    padding: 0.6rem .3rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black
+}
+
+.form-contact__submit{
+    margin: 0px;
+    background-color: goldenrod;
+    border-radius: 15%;
+    border: 2px solid goldenrod;
+    font-size: 1.2em;
+    color: white;
+}
+
+.form-contact__submit:hover{
+    background-color: white;
+    color: goldenrod;
+}
+
+.copy{
+    background-color: #222;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    
+    body{
+        width: 98%;
+    }
+    
+    main{
+        font-size: 1.2em;
+        
+    }
+
+    .aside{
+        display: none;
+    }
+
+    .main__header{
+        background: url(../img/fondo-h1-3.jpg);
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header__container{
+        width: 88%;
+        margin: auto;
+        font-size: 1.5em;
+    }
+
+    .nav__item{
+        width: 280px;
+    }
+
+    .def__title{
+        font-size: 2em;
+    }
+
+    .banner__def{
+        width: 90%;
+        display: block;
+        margin: auto;
+        top: 100px;
+        left: 40px;
+        height: 200px;
+
+    }
+
+    .main__aspect{
+        padding: 10px 30px;
+        line-height: 25px;
+        position: relative;
+    }
+
+    .aspect__title{
+        font-size: 1.7em;
+        margin-bottom: 50px;
+    }
+
+    .historia__h2{
+        font-size: 2.5em;
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .historia__container{
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .historia__item{
+        padding: 25px;
+        font-size: 1.1em;
+    }
+
+    .historia__img{
+        width: 270px;
+    }
+
+    .historia__title{
+        font-size: 1.8em;
+    }
+
+    .footer-section__redes h2{
+        font-size: 3.2em;
+    }
+
+    .footer-section__redes img{
+        width: 160px;
+        height: 160px;
+        padding: 20px;
+        margin: 15px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .icon__menu{
+        display: none;
+    }
+
+    .header__container{
+        width: 95%;
+        padding: 15px;
+        height: 180px;
+    }
+
+    .main__header{
+        background: url(../img/fondo-h1-2.jpg);
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .nav-redes{
+        margin-left: 50px;
+    }
+
+    .main .banner__def{
+        top: 200px;
+        left: 60px;
+    }
+
+    .main__title{
+        font-size: 1.5em;
+        width: 20%;
+        margin-right: 30px
+    }
+
+    .menu{
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        width: 80%;
+        display: flex;
+        background: none;
+        font-size: 1em;
+    }
+
+    .nav__item{
+        padding: 20px;
+        text-align: center;
+        width: 150px;
+        margin: auto;
+    }
+    
+    .nav__link{
+        position: relative;
+        display: block;
+        font-size: 1.1em;
+    }
+
+    .def__title{
+        font-size: 2.5rem;
+    }
+
+    .def__text{
+        font-size: 1.3em;
+    }
+    .aspect__title{
+        font-size: 3rem;
+        margin: 50px;
+    }
+
+    .aspect__text{
+        font-size: 1.4rem;
+    }
+
+    .aspect__img{
+        display: block;
+        margin: 80px;
+    }
+
+    .dioses__h2{
+        font-size: 2.5em;
+    }
+
+    .dioses__title{
+        font-size: 2em;
+    }
+
+    .historia__container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+
+    .historia__item{
+        background-color: hsl(0, 79%, 24%);
+    }
+}
+

@@ -1,0 +1,128 @@
+
+.main-griega{
+    &__def {
+        background-color: hsla(123, 86%, 20%, 0.874) ;
+        padding: 15px;
+        margin: 40px 20px;
+        border: 2px solid $color-dorado;
+        border-radius: 15px;
+        text-align: center;
+        .main-griega__title {
+            text-align: center;
+            color: $color-dorado;
+            font-size: 1.8em;
+            text-decoration: overline ;
+        }
+
+        .main-griega__text {
+            color: white;
+            margin-bottom: 20px;
+            margin: auto;
+        }
+
+        .main-griega__img{
+            width: 80%;
+            display: flex;
+            margin: auto;
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 768px){
+    
+
+    .main-griega{
+        .main-griega__def{
+            padding: 30px;
+            background-color: white;;
+            .main-griega__title{
+                color: $color-dorado;
+                font-size: 2.6em;
+                font-weight: bold;
+            }
+    
+            .main-griega__text{
+                font-size: 1.2em;
+                color: black;
+            }
+        
+            .main-griega__img{
+                margin-top: 50px;
+            }
+        }
+
+        .dioses-griega{
+            .dioses__h2{
+                font-weight: bold;
+                font-size: 2.6em;
+            }
+
+            .dioses__container{
+                .dioses__item{
+                    background: white;
+                    .dioses__title{
+                        color: black;
+                        font-weight: bold;
+                        font-size: 2.4em;
+                    }
+                    .dioses__text{
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        .historias__container{
+            .historias__item{
+                background-color: white;
+                .historias__title{
+                    font-weight: bold;
+                    font-size: 1.8em;
+                }
+                .historias__text{
+                    color: black;
+                }
+            }
+        }
+    }
+    
+
+}
+
+@media screen and (min-width: 1024px){
+    .main-griega{
+
+        .historias-griega{
+
+            .historias__container{
+                display: flex;
+                flex-direction: column;
+                .historias__item{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 30px;
+                    .historias__title{
+                        font-size: 2.8em;
+                        line-height: 50px;
+                    }
+
+                    .historias__text{
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+                    .historias__img{
+                        width: 150px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+

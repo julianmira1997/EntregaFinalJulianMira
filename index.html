@@ -1,12 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400&family=Tilt+Prism&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.0.0.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Mitologias del mundo</title>
 </head>
+
 <body>
-    
+    <!-- header -->
+    <header class="header">
+
+        <section class="top-nav">
+            <div>
+                <h1>MITOLOGIAS</h1>
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li> <a class="nav__a nav__a-select" href="index.html">inicio </a></li>
+                <li> <a class="nav__a" href="./pages/griega.html">mitologia griega</a></li>
+                <li> <a class="nav__a" href="./pages/nordica.html">mitologia nordica</a></li>
+                <li> <a class="nav__a" href="./pages/egipcia.html">mitologia egipcia</a></li>
+                <li> <a class="nav__a" href="./pages/cristiana.html">mitologia cristiana</a></li>
+            </ul>
+        </section>
+
+    </header>
+
+    <!-- aca inicia el main -->
+
+    <main class="main__index main">
+        <section class="def">
+            <h3 class="def__title">Que es la mitologia?</h3>
+            <p class="def__text">La mitología es un conjunto de relatos y creencias que forman parte de la cultura
+                de
+                diversos pueblos y civilizaciones a lo largo de la historia. Estas historias míticas se utilizaban
+                para
+                explicar el origen del mundo, de los seres humanos, de los dioses y diosas, así como para dar
+                significado a fenómenos naturales, eventos históricos y aspectos de la vida humana.</p>
+
+            <img src="./img/mitologias.jpg" alt="" class="def__img">
+        </section>
+
+        <section class="aspect">
+            <h3 class="aspect__title">Aspectos generales</h3>
+            <p class="aspect__text">
+                Todas las mitologias tienen aspectos en comun que a su vez son las cosas que las distinguen de otro
+                tipo
+                de creencias y son:</p>
+            <p class="aspect__text"><span class="aspect__span">Dioses y diosas:</span> Las mitologías suelen incluir
+                una amplia variedad
+                de
+                deidades que personifican diferentes aspectos de la naturaleza, el poder y las fuerzas cósmicas.
+                Estos
+                dioses y diosas tienen atributos y roles específicos, y a menudo interactúan entre sí y con los
+                seres
+                humanos.</p>
+            <p class="aspect__text"><span class="aspect__span">Relatos de creación:</span> Las mitologías ofrecen
+                explicaciones sobre el
+                origen del mundo y la creación de la humanidad. Estas historias pueden involucrar la intervención
+                divina, la formación de los elementos primordiales o la transformación de seres divinos en la
+                realidad.</p>
+            <p class="aspect__text"><span class="aspect__span">Héroes y seres sobrenaturales:</span> Las mitologías
+                suelen presentar
+                héroes
+                y personajes con habilidades o características especiales. Estos héroes se enfrentan a desafíos,
+                realizan hazañas asombrosas y, a menudo, tienen un origen divino o una conexión con los dioses.</p>
+            <p class="aspect__text"><span class="aspect__span">Mitos cosmogónicos:</span> Muchas mitologías incluyen
+                relatos sobre la
+                estructura y organización del universo, así como sobre las diferentes dimensiones o planos
+                existenciales. Estos mitos pueden describir la creación de los cielos, la tierra, el inframundo y
+                otros
+                reinos.</p>
+            <p class="aspect__text"><span class="aspect__span">Seres fantásticos y criaturas míticas:</span> Las
+                mitologías están llenas
+                de
+                seres fantásticos y criaturas mitológicas, como dragones, sirenas, grifos, centauros, elfos y muchos
+                otros. Estas criaturas a menudo representan fuerzas naturales, elementos simbólicos o aspectos de la
+                condición humana.</p>
+            <p class="aspect__text"><span class="aspect__span">Mitos de origen y fundacionales:</span> Las
+                mitologías también cuentan
+                historias sobre el origen de ciudades, tribus o civilizaciones. Estos mitos pueden explicar el
+                linaje de
+                los gobernantes, las razones de la fundación de una ciudad o las conexiones entre los dioses y los
+                pueblos.</p>
+            <p class="aspect__text"><span class="aspect__span">Moralidad y enseñanzas:</span> Los mitos a menudo
+                transmiten valores
+                culturales y morales, y brindan lecciones sobre el comportamiento humano, las virtudes y las
+                consecuencias de las acciones. Estas historias míticas pueden ser utilizadas para guiar el
+                comportamiento de las personas y transmitir normas sociales.</p>
+
+            <div class="aspect__img">
+                <img src="./img/esfinge.webp" alt="">
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+
+    <footer class="footer">
+
+        <div class="footer__column">
+            <section class="footer__section">
+                <div class="footer__section-title">
+                    <h2 class="redes__title">visita nuestras redes</h2>
+                </div>
+
+                <div class="footer__redes">
+                    <a class="footer__redes-link" target="_blank" rel="noopener" href="https://es-es.facebook.com/"><img
+                            class="footer__redes-img" src="../img/logo-face.avif" alt="logo facebook"></a>
+                    <a class="footer__redes-link" target="_blank" rel="noopener" href="https://www.instagram.com/"><img
+                            class="footer__redes-img" src="../img/logo-insta.webp" alt="logo instagram"></a>
+                    <a class="footer__redes-link" target="_blank" rel="noopener" href="https://twitter.com/"><img
+                            class="footer__redes-img" src="../img/logo-twitter.avif" alt="logo twitter"></a>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer__column">
+            <section class="footer__section">
+                <div class="footer__section-title">
+                    <h2 class="form__title"">Contactenos</h2></div>
+                <div class=" form-container">
+                        <form class="form-contact">
+                            <div class="form-contact__container">
+                                <div class="form-contact__group">
+                                    <input type="text" class="form-contact__input" id="name" placeholder=" ">
+                                    <label for="name" class="form-contact__label">Nombre: </label>
+                                    <span class="form-contact__line"></span>
+                                </div>
+
+                                <div class="form-contact__group">
+                                    <input type="email" class="form-contact__input" id="email" placeholder=" ">
+                                    <label for="email" class="form-contact__label">Correo: </label>
+                                    <span class="form-contact__line"></span>
+                                </div>
+
+                                <div class="form-contact__group">
+                                    <textarea class="form-contact__input form__textarea" name="" id="mensaje" cols="30"
+                                        rows="10" placeholder="Escribe tu mensaje..."></textarea>
+                                    <label for="mensaje" class="form-contact__label"></label>
+                                    <span class="form-contact__line"></span>
+                                </div>
+
+                                <input type="submit" class="form-contact__submit" value="Enviar">
+                            </div>
+                        </form>
+                </div>
+            </section>
+        </div>
+        <p class="copy">Este sitio no fue copiado de ningun lugar y pertenece a Julian Mira @2023</p>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

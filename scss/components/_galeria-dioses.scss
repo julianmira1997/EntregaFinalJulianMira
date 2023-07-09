@@ -1,0 +1,74 @@
+
+    .dioses {
+        &__h2{
+            text-align: center;
+            font-size: 1.7em;
+            margin: 15px;
+            color: $color-dorado;
+            background-color: black;
+            padding: 10px;
+            border: 2px solid $color-dorado;
+        }
+    
+        &__container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            width: 95%;
+            margin: auto;
+            position: relative;
+            .dioses__item{
+                margin-top: 25px;
+                padding: 15px;
+                border: 2px solid black;
+                border-radius: 15px;
+                background: #666;
+                .dioses__title{
+                    font-size: 2.5em;
+                    color: $color-dorado;
+                    margin-left: 30px;
+                    margin-bottom: 40px;
+                }
+    
+                .dioses__img{
+                    margin-bottom: 15px;
+                }
+    
+                .dioses__img:hover{
+                    transform: scale(1.1);
+                    border: 1px solid $color-dorado;
+                }
+    
+                .dioses__text{
+                    color: white;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px){
+            .dioses__h2{
+                font-size: 2.3em;
+            }
+
+            .dioses__item{
+                padding: 15px;
+
+                .dioses__title{
+                    font-size: 2.5em;
+                    font-weight: bold;
+                }
+
+                .dioses__text{
+                    font-size: 1.1em;
+                }
+
+                .dioses__img{
+                    margin: 1em 0;
+                }
+            }
+        }
+            
+
+        @media screen and (min-width: 1024px){}
+    }

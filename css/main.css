@@ -1,0 +1,836 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Tilt Prism", cursive;
+}
+
+p {
+  font-family: "Signika Negative", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: url(../img/cielo-estrellado.jpg!d);
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: url(../../img/fondo-h1.jpg);
+  color: #daa520;
+  height: 50px;
+  padding: 2em 1em;
+}
+.top-nav h1 {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.menu li {
+  margin: 20px 10px;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+.menu-button-container {
+  display: none;
+  height: 130px;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+.menu li .nav__a {
+  color: white;
+  text-transform: uppercase;
+}
+
+.menu li .nav__a-select {
+  color: #daa520;
+}
+
+@media (max-width: 1024px) {
+  .top-nav {
+    background: url(../../img/fondo-h1-3.jpg);
+  }
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    background-color: #222;
+  }
+  .menu li .nav__a {
+    color: white;
+    text-transform: uppercase;
+  }
+  .menu li .nav__a-select {
+    color: #daa520;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+.footer {
+  gap: 15px;
+}
+.footer .footer__column {
+  width: 90%;
+  margin: auto;
+  background-color: #eee;
+}
+.footer .footer__column .footer__section {
+  padding: 10px;
+}
+.footer .footer__column .footer__section .redes__title {
+  font-size: 2em;
+  color: goldenrod;
+  text-align: center;
+  padding: 10px;
+  top: 40px;
+  font-size: 3em;
+  border-bottom: 2px solid;
+  font-weight: bold;
+}
+.footer .footer__column .footer__section .footer__redes {
+  display: flex;
+  justify-content: space-around;
+}
+.footer .footer__column .footer__section .footer__redes a .footer__redes-img {
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  margin-top: 15px;
+}
+.footer .footer__column .footer__section .footer__section-title .form__title {
+  font-size: 2em;
+  color: goldenrod;
+  text-align: center;
+  padding: 10px;
+  top: 40px;
+  font-size: 3em;
+  border-bottom: 2px solid;
+  margin: 50px;
+  font-weight: bold;
+}
+.footer .footer__column .footer__section .form-container {
+  background-color: #eee;
+  min-height: 70vh;
+  display: flex;
+}
+.footer .footer__column .footer__section .form-container .form-contact {
+  margin: 15px auto;
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  padding: 1.5em 3em;
+  border-radius: 2%;
+  box-shadow: 2px 5px 10px -5px rgba(0, 0, 0, 0.6);
+}
+.footer .footer__column .footer__section .form-container .form-contact .form-contact__container {
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+.footer .footer__column .footer__section .form-container .form-contact .form-contact__container .form-contact__group {
+  position: relative;
+}
+.footer .footer__column .footer__section .form-container .form-contact .form-contact__container .form-contact__group .form-contact__input {
+  width: 100%;
+  background: none;
+  font-size: 1rem;
+  padding: 0.6rem 0.3rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+.footer .footer__column .footer__section .form-container .form-contact .form-contact__container .form-contact__group .form-contact__label {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  color: rgba(0, 0, 0, 0.2);
+  transform: translateY(10px);
+  transition: transform 0.5s;
+}
+.footer .footer__column .footer__section .form-container .form-contact .form-contact__container .form-contact__group .form-contact__input:focus + .form-contact__label {
+  transform: translateY(-12px) scale(0.7);
+  transform-origin: left top;
+}
+.footer .footer__column .footer__section .form-container .form-contact .form-contact__container .form__textarea {
+  resize: none;
+}
+.footer .footer__column .footer__section .form-container .form-contact .form-contact__container .form__textarea::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+.footer .footer__column .footer__section .form-container .form-contact .form-contact__submit {
+  margin: 0px;
+  background-color: goldenrod;
+  border-radius: 15%;
+  border: 2px solid goldenrod;
+  font-size: 1.2em;
+  color: white;
+}
+.footer .footer__column .footer__section .form-container .form-contact .form-contact__submit:hover {
+  background-color: white;
+  color: goldenrod;
+}
+.footer .copy {
+  background-color: #222;
+  min-width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer__column .footer__section .footer__redes .footer__redes-link .footer__redes-img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer .footer__column .footer__section .footer__section-title {
+    font-size: 1.5em;
+  }
+  .footer .footer__column .footer__section .footer__redes .footer__redes-link .footer__redes-img {
+    width: 180px;
+    height: 180px;
+  }
+  .form-container {
+    min-height: 100vh;
+  }
+}
+.dioses__h2 {
+  text-align: center;
+  font-size: 1.7em;
+  margin: 15px;
+  color: #daa520;
+  background-color: black;
+  padding: 10px;
+  border: 2px solid #daa520;
+}
+.dioses__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  width: 95%;
+  margin: auto;
+  position: relative;
+}
+.dioses__container .dioses__item {
+  margin-top: 25px;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background: #666;
+}
+.dioses__container .dioses__item .dioses__title {
+  font-size: 2.5em;
+  color: #daa520;
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+.dioses__container .dioses__item .dioses__img {
+  margin-bottom: 15px;
+}
+.dioses__container .dioses__item .dioses__img:hover {
+  transform: scale(1.1);
+  border: 1px solid #daa520;
+}
+.dioses__container .dioses__item .dioses__text {
+  color: white;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .dioses .dioses__h2 {
+    font-size: 2.3em;
+  }
+  .dioses .dioses__item {
+    padding: 15px;
+  }
+  .dioses .dioses__item .dioses__title {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  .dioses .dioses__item .dioses__text {
+    font-size: 1.1em;
+  }
+  .dioses .dioses__item .dioses__img {
+    margin: 1em 0;
+  }
+}
+.historias .historias__h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 15px;
+  color: #daa520;
+  background-color: black;
+  padding: 10px;
+}
+.historias .historias__container {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+.historias .historias__container .historias__item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 2px solid #daa520;
+  border-radius: 15px;
+  text-align: center;
+  background-color: black;
+}
+.historias .historias__container .historias__item .historias__title {
+  text-align: center;
+  color: #daa520;
+  margin: 20px;
+}
+.historias .historias__container .historias__item .historias__text {
+  color: white;
+}
+.historias .historias__container .historias__item .historias__img {
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+.main__index {
+  margin: 15px;
+  justify-content: center;
+}
+.main__index .def {
+  text-align: center;
+}
+.main__index .def .def__title {
+  color: #daa520;
+  font-size: 2em;
+  font-weight: bold;
+}
+.main__index .def .def__text {
+  color: white;
+}
+.main__index .aspect {
+  padding: 15px;
+}
+.main__index .aspect .aspect__title {
+  color: #daa520;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+.main__index .aspect .aspect__text {
+  font-size: 1.1em;
+  color: white;
+}
+.main__index .aspect .aspect__text .aspect__span {
+  color: #daa520;
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+  .main__index .def {
+    align-items: center;
+    margin: auto;
+  }
+  .main__index .def .def__text {
+    margin: 20px auto;
+  }
+  .main__index .def .def__img {
+    width: 70%;
+    border-radius: 15px;
+  }
+  .main__index .aspect .aspect__title {
+    font-size: 2.2em;
+  }
+  .main__index .aspect .aspect__img {
+    width: 70%;
+    margin: auto;
+  }
+  .main__index .aspect .aspect__img img {
+    border-radius: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .aspect {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+  }
+  .aspect .aspect__text {
+    margin: 15px auto;
+  }
+}
+.main-griega__def {
+  background-color: hsla(123, 86%, 20%, 0.874);
+  padding: 15px;
+  margin: 40px 20px;
+  border: 2px solid #daa520;
+  border-radius: 15px;
+  text-align: center;
+}
+.main-griega__def .main-griega__title {
+  text-align: center;
+  color: #daa520;
+  font-size: 1.8em;
+  text-decoration: overline;
+}
+.main-griega__def .main-griega__text {
+  color: white;
+  margin-bottom: 20px;
+  margin: auto;
+}
+.main-griega__def .main-griega__img {
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .main-griega .main-griega__def {
+    padding: 30px;
+    background-color: white;
+  }
+  .main-griega .main-griega__def .main-griega__title {
+    color: #daa520;
+    font-size: 2.6em;
+    font-weight: bold;
+  }
+  .main-griega .main-griega__def .main-griega__text {
+    font-size: 1.2em;
+    color: black;
+  }
+  .main-griega .main-griega__def .main-griega__img {
+    margin-top: 50px;
+  }
+  .main-griega .dioses-griega .dioses__h2 {
+    font-weight: bold;
+    font-size: 2.6em;
+  }
+  .main-griega .dioses-griega .dioses__container .dioses__item {
+    background: white;
+  }
+  .main-griega .dioses-griega .dioses__container .dioses__item .dioses__title {
+    color: black;
+    font-weight: bold;
+    font-size: 2.4em;
+  }
+  .main-griega .dioses-griega .dioses__container .dioses__item .dioses__text {
+    color: black;
+  }
+  .main-griega .historias__container .historias__item {
+    background-color: white;
+  }
+  .main-griega .historias__container .historias__item .historias__title {
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+  .main-griega .historias__container .historias__item .historias__text {
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-griega .historias-griega .historias__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-griega .historias-griega .historias__container .historias__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+  }
+  .main-griega .historias-griega .historias__container .historias__item .historias__title {
+    font-size: 2.8em;
+    line-height: 50px;
+  }
+  .main-griega .historias-griega .historias__container .historias__item .historias__text {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-griega .historias-griega .historias__container .historias__item .historias__img {
+    width: 150px;
+  }
+}
+.main-nordica__def {
+  background-color: hsla(123, 86%, 20%, 0.874);
+  padding: 15px;
+  margin: 40px 20px;
+  border: 2px solid #daa520;
+  border-radius: 15px;
+  text-align: center;
+}
+.main-nordica__def .main-nordica__title {
+  text-align: center;
+  color: #daa520;
+  font-size: 1.8em;
+  text-decoration: overline;
+}
+.main-nordica__def .main-nordica__text {
+  color: white;
+  margin-bottom: 20px;
+  margin: auto;
+}
+.main-nordica__def .main-nordica__img {
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+.main-nordica .historias-nordica {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .main-nordica .main-nordica__def {
+    padding: 30px;
+    background-color: red;
+  }
+  .main-nordica .main-nordica__def .main-nordica__title {
+    color: #daa520;
+    font-size: 2.6em;
+    font-weight: bold;
+  }
+  .main-nordica .main-nordica__def .main-nordica__text {
+    font-size: 1.2em;
+    color: white;
+  }
+  .main-nordica .main-nordica__def .main-nordica__img {
+    margin-top: 50px;
+  }
+  .main-nordica .dioses-nordica .dioses__h2 {
+    font-weight: bold;
+    font-size: 2.6em;
+  }
+  .main-nordica .dioses-nordica .dioses__container .dioses__item {
+    background: red;
+  }
+  .main-nordica .dioses-nordica .dioses__container .dioses__item .dioses__title {
+    color: white;
+    font-weight: bold;
+    font-size: 2.4em;
+  }
+  .main-nordica .dioses-nordica .dioses__container .dioses__item .dioses__text {
+    color: white;
+  }
+  .main-nordica .historias-nordica .historias__h2 {
+    font-size: 3.2em;
+  }
+  .main-nordica .historias-nordica .historias__item {
+    background-color: red;
+  }
+  .main-nordica .historias-nordica .historias__item .historias__title {
+    color: white;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-nordica .historias-nordica .historias__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-nordica .historias-nordica .historias__container .historias__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+  }
+  .main-nordica .historias-nordica .historias__container .historias__item .historias__title {
+    font-size: 2.8em;
+    line-height: 50px;
+  }
+  .main-nordica .historias-nordica .historias__container .historias__item .historias__text {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-nordica .historias-nordica .historias__container .historias__item .historias__img {
+    width: 150px;
+  }
+}
+.main-egipcia__def {
+  background-color: hsla(123, 86%, 20%, 0.874);
+  padding: 15px;
+  margin: 40px 20px;
+  border: 2px solid #daa520;
+  border-radius: 15px;
+  text-align: center;
+}
+.main-egipcia__def .main-egipcia__title {
+  text-align: center;
+  color: #daa520;
+  font-size: 1.8em;
+  text-decoration: overline;
+}
+.main-egipcia__def .main-egipcia__text {
+  color: white;
+  margin-bottom: 20px;
+  margin: auto;
+}
+.main-egipcia__def .main-egipcia__img {
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+.main-egipcia .historias-egipcia {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .main-egipcia .main-egipcia__def {
+    padding: 30px;
+    background-color: blue;
+  }
+  .main-egipcia .main-egipcia__def .main-egipcia__title {
+    color: #daa520;
+    font-size: 2.6em;
+    font-weight: bold;
+  }
+  .main-egipcia .main-egipcia__def .main-egipcia__text {
+    font-size: 1.2em;
+    color: white;
+  }
+  .main-egipcia .main-egipcia__def .main-egipcia__img {
+    margin-top: 50px;
+  }
+  .main-egipcia .dioses-egipcia .dioses__h2 {
+    font-weight: bold;
+    font-size: 2.6em;
+  }
+  .main-egipcia .dioses-egipcia .dioses__container .dioses__item {
+    background: blue;
+  }
+  .main-egipcia .dioses-egipcia .dioses__container .dioses__item .dioses__title {
+    color: white;
+    font-weight: bold;
+    font-size: 2.4em;
+  }
+  .main-egipcia .dioses-egipcia .dioses__container .dioses__item .dioses__text {
+    color: white;
+  }
+  .main-egipcia .historias-egipcia .historias__h2 {
+    font-size: 3.2em;
+  }
+  .main-egipcia .historias-egipcia .historias__item {
+    background-color: blue;
+  }
+  .main-egipcia .historias-egipcia .historias__item .historias__title {
+    color: white;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-egipcia .historias-egipcia .historias__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-egipcia .historias-egipcia .historias__container .historias__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+  }
+  .main-egipcia .historias-egipcia .historias__container .historias__item .historias__title {
+    font-size: 2.8em;
+    line-height: 50px;
+  }
+  .main-egipcia .historias-egipcia .historias__container .historias__item .historias__text {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-egipcia .historias-egipcia .historias__container .historias__item .historias__img {
+    width: 150px;
+  }
+}
+.main-cristiana .main-cristiana__def {
+  background-color: hsla(123, 86%, 20%, 0.874);
+  padding: 15px;
+  margin: 40px 20px;
+  border: 2px solid #daa520;
+  border-radius: 15px;
+  text-align: center;
+}
+.main-cristiana .main-cristiana__def .main-cristiana__title {
+  text-align: center;
+  color: #daa520;
+  font-size: 1.8em;
+  text-decoration: overline;
+}
+.main-cristiana .main-cristiana__def .main-cristiana__text {
+  color: white;
+  margin-bottom: 20px;
+  margin: auto;
+}
+.main-cristiana .main-cristiana__def .main-cristiana__img {
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+.main-cristiana .historias-cristiana .historias__container .historias__item .historias__img {
+  width: 250px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-cristiana .main-cristiana__def {
+    padding: 30px;
+    background-color: yellow;
+  }
+  .main-cristiana .main-cristiana__def .main-cristiana__title {
+    color: black;
+    font-size: 2.6em;
+    font-weight: bold;
+  }
+  .main-cristiana .main-cristiana__def .main-cristiana__text {
+    font-size: 1.2em;
+    color: black;
+  }
+  .main-cristiana .main-cristiana__def .main-cristiana__img {
+    margin-top: 50px;
+  }
+  .main-cristiana .dioses-cristiana .dioses__h2 {
+    font-weight: bold;
+    font-size: 2.6em;
+  }
+  .main-cristiana .dioses-cristiana .dioses__container .dioses__item {
+    background: yellow;
+  }
+  .main-cristiana .dioses-cristiana .dioses__container .dioses__item .dioses__title {
+    color: black;
+    font-weight: bold;
+    font-size: 2.4em;
+  }
+  .main-cristiana .dioses-cristiana .dioses__container .dioses__item .dioses__text {
+    color: black;
+  }
+  .main-cristiana .historias__container .historias__item {
+    background-color: yellow;
+  }
+  .main-cristiana .historias__container .historias__item .historias__title {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: black;
+  }
+  .main-cristiana .historias__container .historias__item .historias__text {
+    color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-cristiana .historias__h2 {
+    font-size: 3.5em;
+  }
+  .main-cristiana .historias-cristiana .historias__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-cristiana .historias-cristiana .historias__container .historias__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+  }
+  .main-cristiana .historias-cristiana .historias__container .historias__item .historias__title {
+    font-size: 2.8em;
+    line-height: 50px;
+  }
+  .main-cristiana .historias-cristiana .historias__container .historias__item .historias__text {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,12 @@
+@mixin flex($dir , $wrap , $just , $aling ){
+    display: flex;
+    flex-flow: $dir $wrap;
+    justify-content: $just;
+    align-items: $aling;
+}
+
+@mixin titulo($aling , $size , $weight ){
+    text-align: $aling;
+    font-size: $size;
+    font-weight: $weight;
+}
