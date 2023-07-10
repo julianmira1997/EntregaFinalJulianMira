@@ -40,9 +40,19 @@ body {
   height: 50px;
   padding: 2em 1em;
 }
+.top-nav .link__h1 {
+  color: #daa520;
+}
 .top-nav h1 {
   font-weight: bold;
   font-size: 2.5em;
+}
+.top-nav h1:hover {
+  transform: scale(1.2) translateX(20px);
+  transition: all 1s ease;
+}
+.top-nav li .nav__a:hover {
+  color: #daa520;
 }
 
 .menu {
@@ -53,7 +63,6 @@ body {
   padding: 0;
   justify-content: center;
 }
-
 .menu li {
   margin: 20px 10px;
   overflow: hidden;
@@ -113,6 +122,9 @@ body {
 .menu li .nav__a {
   color: white;
   text-transform: uppercase;
+}
+.menu li .nav__a .menu li .nav__a:hover {
+  color: #daa520;
 }
 
 .menu li .nav__a-select {
@@ -197,6 +209,12 @@ body {
   height: 120px;
   padding: 20px;
   margin-top: 15px;
+}
+.footer .footer__column .footer__section .footer__redes a .footer__redes-img:hover {
+  scale: 1.1;
+  border: 2px solid #daa520;
+  border-radius: 50%;
+  transform: rotate(-25deg);
 }
 .footer .footer__column .footer__section .footer__section-title .form__title {
   font-size: 2em;
@@ -488,7 +506,7 @@ body {
 @media screen and (min-width: 768px) {
   .main-griega .main-griega__def {
     padding: 30px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.4);
   }
   .main-griega .main-griega__def .main-griega__title {
     color: #daa520;
@@ -497,7 +515,7 @@ body {
   }
   .main-griega .main-griega__def .main-griega__text {
     font-size: 1.2em;
-    color: black;
+    color: white;
   }
   .main-griega .main-griega__def .main-griega__img {
     margin-top: 50px;
@@ -507,28 +525,32 @@ body {
     font-size: 2.6em;
   }
   .main-griega .dioses-griega .dioses__container .dioses__item {
-    background: white;
+    background: rgba(255, 255, 255, 0.4);
   }
   .main-griega .dioses-griega .dioses__container .dioses__item .dioses__title {
-    color: black;
+    color: #daa520;
     font-weight: bold;
     font-size: 2.4em;
   }
   .main-griega .dioses-griega .dioses__container .dioses__item .dioses__text {
-    color: black;
+    color: white;
   }
   .main-griega .historias__container .historias__item {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.4);
   }
   .main-griega .historias__container .historias__item .historias__title {
     font-weight: bold;
     font-size: 1.8em;
   }
   .main-griega .historias__container .historias__item .historias__text {
-    color: black;
+    color: white;
+    font-size: 1.2em;
   }
 }
 @media screen and (min-width: 1024px) {
+  .main-griega .historias-griega .historias__h2 {
+    font-size: 2.5em;
+  }
   .main-griega .historias-griega .historias__container {
     display: flex;
     flex-direction: column;
@@ -582,7 +604,7 @@ body {
 @media screen and (min-width: 768px) {
   .main-nordica .main-nordica__def {
     padding: 30px;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.4);
   }
   .main-nordica .main-nordica__def .main-nordica__title {
     color: #daa520;
@@ -601,10 +623,10 @@ body {
     font-size: 2.6em;
   }
   .main-nordica .dioses-nordica .dioses__container .dioses__item {
-    background: red;
+    background: rgba(255, 0, 0, 0.4);
   }
   .main-nordica .dioses-nordica .dioses__container .dioses__item .dioses__title {
-    color: white;
+    color: #daa520;
     font-weight: bold;
     font-size: 2.4em;
   }
@@ -615,10 +637,10 @@ body {
     font-size: 3.2em;
   }
   .main-nordica .historias-nordica .historias__item {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.4);
   }
   .main-nordica .historias-nordica .historias__item .historias__title {
-    color: white;
+    color: #daa520;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -675,7 +697,7 @@ body {
 @media screen and (min-width: 768px) {
   .main-egipcia .main-egipcia__def {
     padding: 30px;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.3);
   }
   .main-egipcia .main-egipcia__def .main-egipcia__title {
     color: #daa520;
@@ -694,10 +716,10 @@ body {
     font-size: 2.6em;
   }
   .main-egipcia .dioses-egipcia .dioses__container .dioses__item {
-    background: blue;
+    background: rgba(0, 0, 255, 0.3);
   }
   .main-egipcia .dioses-egipcia .dioses__container .dioses__item .dioses__title {
-    color: white;
+    color: #daa520;
     font-weight: bold;
     font-size: 2.4em;
   }
@@ -708,10 +730,10 @@ body {
     font-size: 3.2em;
   }
   .main-egipcia .historias-egipcia .historias__item {
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.3);
   }
   .main-egipcia .historias-egipcia .historias__item .historias__title {
-    color: white;
+    color: #daa520;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -768,16 +790,16 @@ body {
 @media screen and (min-width: 768px) {
   .main-cristiana .main-cristiana__def {
     padding: 30px;
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.4);
   }
   .main-cristiana .main-cristiana__def .main-cristiana__title {
-    color: black;
+    color: #daa520;
     font-size: 2.6em;
     font-weight: bold;
   }
   .main-cristiana .main-cristiana__def .main-cristiana__text {
     font-size: 1.2em;
-    color: black;
+    color: white;
   }
   .main-cristiana .main-cristiana__def .main-cristiana__img {
     margin-top: 50px;
@@ -787,26 +809,26 @@ body {
     font-size: 2.6em;
   }
   .main-cristiana .dioses-cristiana .dioses__container .dioses__item {
-    background: yellow;
+    background: rgba(255, 255, 0, 0.4);
   }
   .main-cristiana .dioses-cristiana .dioses__container .dioses__item .dioses__title {
-    color: black;
+    color: #daa520;
     font-weight: bold;
     font-size: 2.4em;
   }
   .main-cristiana .dioses-cristiana .dioses__container .dioses__item .dioses__text {
-    color: black;
+    color: white;
   }
   .main-cristiana .historias__container .historias__item {
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.4);
   }
   .main-cristiana .historias__container .historias__item .historias__title {
     font-weight: bold;
     font-size: 1.8em;
-    color: black;
+    color: #daa520;
   }
   .main-cristiana .historias__container .historias__item .historias__text {
-    color: black;
+    color: white;
   }
 }
 @media screen and (min-width: 1024px) {

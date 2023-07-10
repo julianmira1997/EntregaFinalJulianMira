@@ -39,7 +39,7 @@
     .main-egipcia{
         .main-egipcia__def{
             padding: 30px;
-            background-color: blue;
+            background-color: $color-azul;
             .main-egipcia__title{
                 color: $color-dorado;
                 font-size: 2.6em;
@@ -64,9 +64,9 @@
 
             .dioses__container{
                 .dioses__item{
-                    background: blue;
+                    background: $color-azul;
                     .dioses__title{
-                        color: white;
+                        color:  $color-dorado;
                         font-weight: bold;
                         font-size: 2.4em;
                     }
@@ -84,10 +84,10 @@
             }
 
             .historias__item{
-                background-color: blue;
+                background-color: $color-azul;
 
                 .historias__title{
-                    color: white;
+                    color:  $color-dorado;
                 }
             }
         }

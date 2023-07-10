@@ -9,9 +9,23 @@
   height: 50px;
   padding: 2em 1em;
   
+  .link__h1{
+    color: $color-dorado;
+
+  }
+
   h1{
     font-weight: bold;
     font-size: 2.5em;
+    &:hover{
+      transform: scale(1.2) translateX(20px);
+      transition: all 1s ease;
+    }
+
+  }
+
+  li .nav__a:hover{
+    color: $color-dorado;
   }
 }
 
@@ -23,14 +37,15 @@
   padding: 0;
   justify-content: center;
 
-}
-
-.menu li {
+  & li {
     margin: 20px 10px;
     overflow: hidden;
     font-size: 1em;
-
   }
+
+}
+
+
 
   .menu-button-container {
     display: none;
@@ -85,11 +100,17 @@
 .menu li .nav__a{
     color: white;
     text-transform: uppercase;
+    
+    .menu li .nav__a:hover{
+      color: $color-dorado;
+    }
   }
 
   .menu li .nav__a-select{
     color: $color-dorado;
   }
+
+  
 
 @media (max-width: 1024px) {
   .top-nav{

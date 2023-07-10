@@ -45,16 +45,16 @@
     .main-cristiana{
         .main-cristiana__def{
             padding: 30px;
-            background-color: yellow;
+            background-color: $color-amarillo;
             .main-cristiana__title{
-                color: black;
+                color:  $color-dorado;
                 font-size: 2.6em;
                 font-weight: bold;
             }
     
             .main-cristiana__text{
                 font-size: 1.2em;
-                color: black;
+                color: white;
             }
         
             .main-cristiana__img{
@@ -70,14 +70,14 @@
 
             .dioses__container{
                 .dioses__item{
-                    background: yellow;
+                    background: $color-amarillo;
                     .dioses__title{
-                        color: black;
+                        color:  $color-dorado;
                         font-weight: bold;
                         font-size: 2.4em;
                     }
                     .dioses__text{
-                        color: black;
+                        color: white;
                     }
                 }
             }
@@ -87,14 +87,14 @@
 
 
             .historias__item{
-                background-color: yellow;
+                background-color: $color-amarillo;
                 .historias__title{
                     font-weight: bold;
                     font-size: 1.8em;
-                    color: black;
+                    color:  $color-dorado;
                 }
                 .historias__text{
-                    color: black;
+                    color: white;
                 }
             }
         }

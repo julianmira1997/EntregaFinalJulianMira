@@ -38,7 +38,7 @@
     .main-nordica{
         .main-nordica__def{
             padding: 30px;
-            background-color: red;
+            background-color: $color-rojo;
             .main-nordica__title{
                 color: $color-dorado;
                 font-size: 2.6em;
@@ -63,9 +63,9 @@
 
             .dioses__container{
                 .dioses__item{
-                    background: red;
+                    background: $color-rojo;
                     .dioses__title{
-                        color: white;
+                        color: $color-dorado;
                         font-weight: bold;
                         font-size: 2.4em;
                     }
@@ -83,10 +83,10 @@
             }
 
             .historias__item{
-                background-color: red;
+                background-color: $color-rojo;
 
                 .historias__title{
-                    color: white;
+                    color: $color-dorado;
                 }
             }
         }
