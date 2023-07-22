@@ -573,7 +573,7 @@ body {
     flex-direction: row;
   }
   .main-griega .historias-griega .historias__container .historias__item .historias__img {
-    width: 150px;
+    width: 300px;
   }
 }
 .main-nordica__def {
@@ -666,7 +666,7 @@ body {
     flex-direction: row;
   }
   .main-nordica .historias-nordica .historias__container .historias__item .historias__img {
-    width: 150px;
+    width: 350px;
   }
 }
 .main-egipcia__def {
@@ -846,7 +846,7 @@ body {
     flex-direction: row;
   }
   .main-egipcia .historias-egipcia .historias__container .historias__item .historias__img {
-    width: 150px;
+    width: 350px;
   }
 }
 .main-cristiana .main-cristiana__def {
@@ -942,6 +942,9 @@ body {
   .main-cristiana .historias-cristiana .historias__container .historias__item .historias__text {
     display: flex;
     flex-direction: row;
+  }
+  .main-cristiana .historias-cristiana .historias__container .historias__item .historias__img {
+    width: 350px;
   }
 }
 
